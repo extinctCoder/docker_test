@@ -1,6 +1,7 @@
 build:
   docker:
-    strapi_api: Dockerfile
+    web: Dockerfile
+    worker: worker/Dockerfile
   config:
     NODE_ENV: $NODE_ENV
     DATABASE_CLIENT: $DATABASE_CLIENT
@@ -14,5 +15,10 @@ build:
     HOST: $HOST
     PORT: $PORT
 
+release:
+  command:
+    - npm install
+  image: npm_install
 run:
-  strapi_api: strapi develop
+  web: strapi develop
+  worker: python_develop
