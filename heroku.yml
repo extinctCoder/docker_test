@@ -1,7 +1,6 @@
 build:
   docker:
     strapi_api: Dockerfile
-    worker: worker/Dockerfile
   config:
     NODE_ENV: development
     DATABASE_CLIENT: postgres
