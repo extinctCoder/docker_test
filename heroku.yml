@@ -17,7 +17,7 @@ build:
 release:
   command:
     - npm install
-  image: strapi_4
+  image: strapi_api
 
 run:
   strapi_api: strapi develop
