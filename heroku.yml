@@ -1,6 +1,6 @@
 build:
   docker:
-    web: Dockerfile
+    strapi_api: Dockerfile
     worker: worker/Dockerfile
   config:
     NODE_ENV: development
@@ -14,11 +14,11 @@ build:
     APP_KEYS: jP8pb1lYsAhnmURarewxhA==,34xnLMYHY5jiU7ONTstTqQ==
     HOST: 0.0.0.0
     PORT: 1337
+
 release:
   command:
     - npm install
-  image: npm_install
+  image: strapi_4
 
 run:
-  web: strapi develop
-  worker: python_develop
+  strapi_api: strapi develop
