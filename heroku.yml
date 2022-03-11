@@ -1,23 +1,11 @@
 build:
   docker:
     strapi_api: Dockerfile
-  config:
-    NODE_ENV: development
-    DATABASE_CLIENT: postgres
-    DATABASE_HOST: '192.168.15.5'
-    DATABASE_PORT: '5432'
-    DATABASE_NAME: strapi
-    DATABASE_USERNAME: postgres
-    DATABASE_PASSWORD: postgres
-    DATABASE_SSL: 'false'
-    APP_KEYS: jP8pb1lYsAhnmURarewxhA==,34xnLMYHY5jiU7ONTstTqQ==
-    HOST: 0.0.0.0
-    PORT: 1337
 
-release:
-  command:
-    - npm install
-  image: strapi_api
-
+# release:
+#   command:
+#     - npm install
+#   image: strapi_api
+#
 run:
   strapi_api: strapi develop
