@@ -1,6 +1,6 @@
 build:
   docker:
-    web: Dockerfile
+    strapi_api: Dockerfile
     worker: worker/Dockerfile
   config:
     NODE_ENV: $NODE_ENV
@@ -18,7 +18,6 @@ build:
 release:
   command:
     - npm install
-  image: npm_install
+  image: strapi_api
 run:
-  web: strapi develop
-  worker: python_develop
+  strapi_api: strapi develop
