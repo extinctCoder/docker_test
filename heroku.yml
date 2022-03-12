@@ -19,4 +19,4 @@ release:
     - npm install
   image: strapi_api
 run:
-  strapi_api: strapi develop
+  strapi_api: npm install && strapi develop
