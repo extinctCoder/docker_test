@@ -7,7 +7,7 @@ build:
     PORT: $PORT
 
 run:
-  strapi_api: yarn develop
+  strapi_api: npm run develop
 # build:
 #   docker:
 #     strapi_api: Dockerfile
