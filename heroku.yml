@@ -4,7 +4,7 @@ build:
   config:
     NODE_ENV: $NODE_ENV
     DATABASE_URL: $DATABASE_URL
-    HOST: $HOST
+    WEBSITE_URL: $WEBSITE_URL
     PORT: $PORT
     APP_KEYS: $APP_KEYS
     JWT_SECRET: $JWT_SECRET
@@ -35,3 +35,4 @@ run:
 # run:
 #   strapi_api: npm install && strapi develop
 #
+
