@@ -1,4 +1,4 @@
-# FROM naskio/strapi
+FROM naskio/strapi
 # 
 # WORKDIR /srv/app
 # COPY ./strapi_data .
@@ -7,8 +7,8 @@
 # 
 # 
 # 
-FROM node:14-alpine
-RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev
+# FROM node:14-alpine
+# RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev
 
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
@@ -21,6 +21,8 @@ ENV PATH /opt/node_modules/.bin:$PATH
 
 RUN yarn config set network-timeout 600000 -g
 RUN npm install
+
+RUN npm install pg-connection-string
 
 WORKDIR /opt/app
 
