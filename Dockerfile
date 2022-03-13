@@ -23,6 +23,9 @@ RUN yarn config set network-timeout 600000 -g
 RUN npm install
 
 RUN npm install pg-connection-string
+RUN npm install knex
+RUN npm install objection
+RUN npm install pg
 
 WORKDIR /opt/app
 
