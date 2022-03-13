@@ -1,4 +1,4 @@
-FROM naskio/strapi
+# FROM naskio/strapi
 # 
 # WORKDIR /srv/app
 # COPY ./strapi_data .
@@ -7,8 +7,8 @@ FROM naskio/strapi
 # 
 # 
 # 
-# FROM node:14-alpine
-# RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev
+FROM node:14-alpine
+RUN apk update && apk add build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev
 
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
