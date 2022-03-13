@@ -15,17 +15,11 @@ ENV NODE_ENV=${NODE_ENV}
 
 WORKDIR /opt/
 COPY ./strapi_data/package.json ./
-COPY ./strapi_data/yarn.lock ./
 
 ENV PATH /opt/node_modules/.bin:$PATH
 
 RUN yarn config set network-timeout 600000 -g
 RUN npm install
-
-RUN npm install pg-connection-string
-RUN npm install knex
-RUN npm install objection
-RUN npm install pg
 
 WORKDIR /opt/app
 
