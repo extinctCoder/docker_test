@@ -27,4 +27,4 @@ COPY ./strapi_data .
 
 EXPOSE ${PORT}
 
-CMD [ "npm run build --clean", "npm run develop" ]
+CMD [ "npm run develop" ]
