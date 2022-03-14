@@ -26,3 +26,5 @@ WORKDIR /opt/app
 COPY ./strapi_data .
 
 EXPOSE ${PORT}
+
+CMD [ "npm run develop" ]

@@ -1,6 +1,6 @@
 build:
   docker:
-    strapi_api: Dockerfile
+    web: Dockerfile
   config:
     NODE_ENV: $NODE_ENV
     DATABASE_URL: $DATABASE_URL
@@ -10,4 +10,4 @@ build:
     JWT_SECRET: $JWT_SECRET
     API_TOKEN_SALT: $API_TOKEN_SALT
 run:
-  strapi_api: npm run develop
+  web: npm run develop
