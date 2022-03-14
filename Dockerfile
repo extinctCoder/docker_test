@@ -24,3 +24,5 @@ RUN npm install
 WORKDIR /opt/app
 
 COPY ./strapi_data .
+
+EXPOSE ${PORT}
