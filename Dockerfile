@@ -27,4 +27,4 @@ COPY ./strapi_data .
 
 EXPOSE ${PORT}
 
-CMD [ "npm run develop" ]
+CMD [ "npm run start" ]
