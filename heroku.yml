@@ -10,4 +10,4 @@ build:
     JWT_SECRET: $JWT_SECRET
     API_TOKEN_SALT: $API_TOKEN_SALT
 run:
-  web: npm run develop
+  web: npm run build --clean && npm run develop
